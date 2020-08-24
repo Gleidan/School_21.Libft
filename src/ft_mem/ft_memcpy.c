@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_clear_table.c                                   :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 16:55:39 by jconcent          #+#    #+#             */
-/*   Updated: 2019/09/16 17:04:05 by jconcent         ###   ########.fr       */
+/*   Created: 2019/09/06 14:17:53 by jconcent          #+#    #+#             */
+/*   Updated: 2019/09/13 14:46:09 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_clear_table(char **array, int i)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int n;
+	unsigned char *temp1;
+	unsigned char *temp2;
 
-	n = 0;
-	while (n < i)
-		free(array[n++]);
-	free(array);
-	return (0);
+	temp1 = (unsigned char *)dst;
+	temp2 = (unsigned char *)src;
+	while (n-- > 0)
+		*temp1++ = *temp2++;
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 13:49:56 by jconcent          #+#    #+#             */
-/*   Updated: 2019/09/16 17:00:36 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/08/20 11:57:56 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "ft_array.h"
+# include "get_next_line.h"
+# include "ft_printf.h"
 
 typedef struct	s_list
 {
@@ -87,6 +90,7 @@ void			ft_clear_list(t_list *lst);
 size_t			ft_list_len(t_list *alst);
 void			ft_strsort(char *str);
 void			ft_swap(char *a, char *b);
-void			*ft_clear_table(char **array, int i);
+void			ft_clear_table(char **array);
+int				ft_wordcounter(const char *str, char c);
 
 #endif

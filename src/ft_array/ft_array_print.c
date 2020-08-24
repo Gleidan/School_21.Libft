@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_array_print.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 16:40:06 by jconcent          #+#    #+#             */
-/*   Updated: 2019/09/16 16:40:58 by jconcent         ###   ########.fr       */
+/*   Created: 2020/08/17 12:50:16 by jconcent          #+#    #+#             */
+/*   Updated: 2020/08/20 11:59:44 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_array.h"
 #include "libft.h"
+#include "stdio.h"
 
-void	ft_swap(char *a, char *b)
+void	ft_array_print(t_array *v)
 {
-	char temp;
+	int i;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	i = 0;
+	while (i < (int)v->size)
+	{
+		ft_printf("%d ", ((int *)v->data)[i]);
+		i++;
+	}
+	ft_printf("\n");
 }

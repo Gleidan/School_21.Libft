@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 11:16:32 by jconcent          #+#    #+#             */
-/*   Updated: 2019/09/08 11:52:27 by jconcent         ###   ########.fr       */
+/*   Created: 2020/08/24 12:16:53 by jconcent          #+#    #+#             */
+/*   Updated: 2020/08/24 12:27:40 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-char	*ft_strdup(const char *s1)
+# include <fcntl.h>
+# include <unistd.h>
+# include "libft.h"
+
+# define BUFF_SIZE 16000
+# define GNL_CONTENT(x) ((t_file*)((x->content)))->content
+# define GNL_START(x) ((t_file*)((x->content)))->content_start
+
+typedef struct	s_file
 {
-	char	*s2;
-	int		i;
-	int		len;
+	int			fd;
+	char		*content;
+	char		*content_start;
+}				t_file;
 
-	len = 0;
-	while (s1[len])
-		len++;
-	if (!(s2 = malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		s2[i] = s1[i];
-		i++;
-	}
-	s2[i] = '\0';
-	return (s2);
-}
+int				get_next_line(int fd, char **line);
+
+#endif
