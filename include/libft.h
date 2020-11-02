@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 13:49:56 by jconcent          #+#    #+#             */
-/*   Updated: 2020/08/20 11:57:56 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/11/02 14:47:17 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,7 @@ void			ft_strsort(char *str);
 void			ft_swap(char *a, char *b);
 void			ft_clear_table(char **array);
 int				ft_wordcounter(const char *str, char c);
+int             ft_isint(char *str);
+char			*ft_strnjoin(char const *s1, char const *s2);
 
 #endif
