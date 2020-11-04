@@ -6,7 +6,7 @@
 #    By: jconcent <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/12 12:27:21 by jconcent          #+#    #+#              #
-#    Updated: 2020/11/02 14:46:46 by jconcent         ###   ########.fr        #
+#    Updated: 2020/11/04 17:00:52 by jconcent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ STRPATH:= ft_str/
 STR:= ft_atoi ft_clear_table ft_itoa ft_putstr ft_putstr_fd ft_strcat ft_strchr ft_strclr ft_strcmp ft_strcpy \
 		ft_strdel ft_strdup ft_strequ ft_striter ft_striteri ft_strjoin ft_strlcat ft_strlen ft_strmap ft_strmapi ft_strncat \
 		ft_strncmp ft_strncpy ft_strnequ ft_strnew ft_strnstr ft_strrchr ft_strsort ft_strsplit ft_strstr ft_strsub ft_strtrim \
-		ft_tolower ft_toupper ft_wordcounter get_next_line ft_strnjoin
+		ft_tolower ft_toupper ft_wordcounter get_next_line ft_strnjoin ft_swap
 
 CC:=gcc
 OBJPATH:=obj/
