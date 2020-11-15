@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 13:49:56 by jconcent          #+#    #+#             */
-/*   Updated: 2020/11/04 17:00:37 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/11/14 21:54:51 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void			ft_lstpushback(t_list **begin_list, t_list *new);
+void			ft_lstrev(t_list **lst);
 int				ft_isspace(int c);
 void			ft_clear_list(t_list *lst);
 size_t			ft_list_len(t_list *alst);
@@ -94,5 +95,6 @@ void			ft_clear_table(char **array);
 int				ft_wordcounter(const char *str, char c);
 int             ft_isint(char *str);
 char			*ft_strnjoin(char const *s1, char const *s2);
+char			*ft_strrew(char const *str, int (*cmp)(int));
 
 #endif
